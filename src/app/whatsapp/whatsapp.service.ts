@@ -7,10 +7,13 @@ export interface WhatsAppResponse{
   message,
 }
 
+enum WhatsappEnum{
+  status = 0
+}
+
 @Injectable({
   providedIn: 'root'
 })
-
 export class WhatsappService {
   
   whatsAppWs: WebSocketSubject<object> = webSocket("wss://echo.websocket.org");
@@ -18,6 +21,8 @@ export class WhatsappService {
   constructor() {
   }
 
-  
+  verifyConnection() {
+    this.whatsAppWs.next({cmd:WhatsappEnum.status})
+  }
 
 }

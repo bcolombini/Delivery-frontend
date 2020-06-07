@@ -22,7 +22,8 @@ const adminRoutes: Routes = [
           { path: 'deliveries', component: DeliveriesComponent },
           { path: 'catalog', component: CatalogComponent },
           { path: 'deliveries/history', component: DeliveriesHistoryComponent },
-          { path: '', component: AdminDashboardComponent }
+          { path: '', redirectTo:"dashboard", pathMatch:"full"},
+          { path: 'dashboard', component: AdminDashboardComponent }
         ]
       }
     ]

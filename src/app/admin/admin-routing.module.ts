@@ -6,6 +6,7 @@ import { DeliveriesComponent } from './deliveries/deliveries.component';
 import { DeliveriesHistoryComponent } from './deliveries-history/deliveries-history.component';
 
 import { AdminComponent } from './admin/admin.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 const adminRoutes: Routes = [
   {
@@ -19,6 +20,7 @@ const adminRoutes: Routes = [
         children: [
           { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule),},
           { path: 'deliveries', component: DeliveriesComponent },
+          { path: 'catalog', component: CatalogComponent },
           { path: 'deliveries/history', component: DeliveriesHistoryComponent },
           { path: '', component: AdminDashboardComponent }
         ]

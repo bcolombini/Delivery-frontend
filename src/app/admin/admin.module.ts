@@ -6,12 +6,13 @@ import { AdminComponent } from './admin/admin.component';
 import { DeliveriesComponent } from './deliveries/deliveries.component';
 import { DeliveriesHistoryComponent } from './deliveries-history/deliveries-history.component';
 import { AdminRoutingModule } from './admin-routing.module';
+import { CatalogComponent } from './catalog/catalog.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule
   ],
-  declarations: [AdminComponent,AdminDashboardComponent,DeliveriesComponent,DeliveriesHistoryComponent],
+  declarations: [AdminComponent,AdminDashboardComponent,DeliveriesComponent,DeliveriesHistoryComponent, CatalogComponent],
 })
 export class AdminModule { }

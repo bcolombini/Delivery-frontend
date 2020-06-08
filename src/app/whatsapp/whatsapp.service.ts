@@ -16,7 +16,7 @@ enum WhatsappEnum{
 })
 export class WhatsappService {
   
-  whatsAppWs: WebSocketSubject<object> = webSocket("wss://echo.websocket.org");
+  whatsAppWs: WebSocketSubject<object> = webSocket(environment.API_WEBSOCKET_WHATSAPP);
 
   constructor() {
   }

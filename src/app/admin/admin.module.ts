@@ -7,11 +7,13 @@ import { DeliveriesComponent } from './deliveries/deliveries.component';
 import { DeliveriesHistoryComponent } from './deliveries-history/deliveries-history.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { CatalogComponent } from './catalog/catalog.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [AdminComponent,AdminDashboardComponent,DeliveriesComponent,DeliveriesHistoryComponent, CatalogComponent],
 })

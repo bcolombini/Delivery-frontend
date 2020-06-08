@@ -19,9 +19,9 @@ const adminRoutes: Routes = [
         canActivateChild: [AuthGuard],
         children: [
           { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule),},
-          { path: 'deliveries', component: DeliveriesComponent },
+          { path: 'order', component: DeliveriesComponent },
           { path: 'catalog', component: CatalogComponent },
-          { path: 'deliveries/history', component: DeliveriesHistoryComponent },
+          { path: 'order/history', component: DeliveriesHistoryComponent },
           { path: '', redirectTo:"dashboard", pathMatch:"full"},
           { path: 'dashboard', component: AdminDashboardComponent }
         ]

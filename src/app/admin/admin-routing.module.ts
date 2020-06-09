@@ -7,6 +7,8 @@ import { DeliveriesHistoryComponent } from './deliveries-history/deliveries-hist
 
 import { AdminComponent } from './admin/admin.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { OrderComponent } from './order/order.component';
+import { OrdermenuComponent } from './ordermenu/ordermenu.component';
 
 const adminRoutes: Routes = [
   {
@@ -19,10 +21,12 @@ const adminRoutes: Routes = [
         canActivateChild: [AuthGuard],
         children: [
           { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule),},
-          { path: 'order', component: DeliveriesComponent },
+          { path: 'orders', component: DeliveriesComponent },
+          { path: 'orders/:id', component: OrdermenuComponent },
           { path: 'catalog', component: CatalogComponent },
-          { path: 'order/history', component: DeliveriesHistoryComponent },
+          { path: 'orders/all/history', component: DeliveriesHistoryComponent },
           { path: '', redirectTo:"dashboard", pathMatch:"full"},
+          { path: '**', redirectTo:"dashboard", pathMatch:"full"},
           { path: 'dashboard', component: AdminDashboardComponent }
         ]
       }

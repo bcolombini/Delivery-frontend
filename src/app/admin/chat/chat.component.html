@@ -1,0 +1,56 @@
+
+<div class="chat">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="incoming">
+                <p>Ola bom dia tudo bem? gostaria de pedir uma alteração no pedido</p>
+            </div>
+            <p class="info_date">Recebida 08/06/2020 às 21:28</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-sm-0 col-sm-12 offset-md-6 col-md-6 text-right">
+            <div class="outcoming">
+                <p>Ola bom dia tudo bem? gostaria de pedir uma alteração no pedido</p>
+            </div>
+            <p class="info_date">Enviada 08/06/2020 às 21:28 </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="incoming">
+                <p>Ola bom dia tudo bem? gostaria de pedir uma alteração no pedido</p>
+            </div>
+            <p class="info_date">Recebida 08/06/2020 às 21:28</p>
+        </div>
+    </div>
+    <div class="row" *ngFor="let number of [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]">
+        <div class="offset-sm-0 col-sm-12 offset-md-6 col-md-6 text-right">
+            <div class="outcoming">
+                <p>Ola bom dia tudo bem? gostaria de pedir uma alteração no pedido</p>
+            </div>
+            <p class="info_date">Enviada 08/06/2020 às 21:28 </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="incoming">
+                <p>Ola bom dia tudo bem? gostaria de pedir uma alteração no pedido</p>
+            </div>
+            <p class="info_date">Recebida 08/06/2020 às 21:28</p>
+        </div>
+    </div>
+</div>
+
+<div class="fixed-bottom sendbox">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Escreva uma mensagem..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-primary" type="button"><fa-icon [icon]="faSend"></fa-icon></button>
+                </div>  
+              </div>
+        </div>
+    </div>
+</div>

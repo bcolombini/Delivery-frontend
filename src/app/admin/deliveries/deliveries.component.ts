@@ -10,6 +10,7 @@ export class DeliveriesComponent implements OnInit {
   faHome = faHome;
   faWallet = faWallet;
   faMoneyBill = faMoneyBill;
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -8,13 +8,18 @@ import { DeliveriesHistoryComponent } from './deliveries-history/deliveries-hist
 import { AdminRoutingModule } from './admin-routing.module';
 import { CatalogComponent } from './catalog/catalog.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { OrderComponent } from './order/order.component';
+import { ChatComponent } from './chat/chat.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OrdermenuComponent } from './ordermenu/ordermenu.component';
+import { FooterComponent } from './order/footer/footer.component';
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
   ],
-  declarations: [AdminComponent,AdminDashboardComponent,DeliveriesComponent,DeliveriesHistoryComponent, CatalogComponent],
+  declarations: [AdminComponent,AdminDashboardComponent,DeliveriesComponent,DeliveriesHistoryComponent, CatalogComponent, OrderComponent, ChatComponent, OrdermenuComponent, FooterComponent]
 })
 export class AdminModule { }

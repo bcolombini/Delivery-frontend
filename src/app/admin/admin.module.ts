@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SettingsRoutingModule } from './settings/settings-routing.module';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './admin/admin.component';
 import { DeliveriesComponent } from './deliveries/deliveries.component';
@@ -13,13 +12,17 @@ import { ChatComponent } from './chat/chat.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OrdermenuComponent } from './ordermenu/ordermenu.component';
 import { FooterComponent } from './order/footer/footer.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { CurrencyFormatPipe } from '../helpers/currency-format.pipe';
+
 @NgModule({
   imports: [
     CommonModule,
     AdminRoutingModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    NgxChartsModule,
   ],
-  declarations: [AdminComponent,AdminDashboardComponent,DeliveriesComponent,DeliveriesHistoryComponent, CatalogComponent, OrderComponent, ChatComponent, OrdermenuComponent, FooterComponent]
+  declarations: [AdminComponent,AdminDashboardComponent,DeliveriesComponent,DeliveriesHistoryComponent, CatalogComponent, OrderComponent, ChatComponent, OrdermenuComponent, FooterComponent,CurrencyFormatPipe]
 })
 export class AdminModule { }

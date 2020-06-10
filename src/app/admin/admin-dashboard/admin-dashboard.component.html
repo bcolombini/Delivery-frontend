@@ -1,1 +1,54 @@
-<p>admin-dashboard works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 mt-3">
+      <div class="card">
+        <div class="card-body  ">
+          <h3 class="card-title">Ganhos do dia</h3>
+          <hr/>
+          <h2 class="pt-5 text-center">{{1000000|currencyFormat}}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 mt-3">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Total do Mês</h3>
+          <hr/>
+          <h2 class="pt-5 text-center">{{1000000|currencyFormat}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 mt-3">
+      <div class="card p-1">
+        <div class="card-body graphCard">
+          <h2 class="card-title">Ganhos diários</h2>
+          <hr/>
+          <ngx-charts-line-chart
+            [view]="view"
+            [scheme]="colorScheme"
+            [xAxis]="xAxis"
+            [yAxis]="yAxis"
+            [results]="multi"
+            [curve]="curve">
+            
+            <ng-template #seriesTooltipTemplate let-model="model">
+                <div class="row">
+                    <div class="col-sm-12 toolTipFormat">
+                      {{model[0].name}} : {{model[0].value|currencyFormat}}
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template #tooltipTemplate let-model="model">
+              <div class="row">
+                  <div class="col-sm-12 toolTipFormat">
+                    {{model.name}} : {{model.value|currencyFormat}}
+                  </div>
+              </div>
+          </ng-template>
+          </ngx-charts-line-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

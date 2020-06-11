@@ -5,7 +5,6 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminComponent } from './admin/admin.component';
 import { DeliveriesComponent } from './deliveries/deliveries/deliveries.component';
 import { DeliveriesHistoryComponent } from './deliveries/deliveries-history/deliveries-history.component';
-// import { CatalogComponent } from './catalog/catalog.component';
 
 const adminRoutes: Routes = [
   {
@@ -27,7 +26,7 @@ const adminRoutes: Routes = [
       { path: '**', redirectTo:"dashboard", pathMatch:"full"},
       { path: 'dashboard', component: AdminDashboardComponent },
 
-      // { path: 'catalog', component: CatalogComponent },
+      
     ]
   }
 ];

@@ -1,1 +1,19 @@
-<p>catalog-menu works!</p>
+<!-- <span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small> -->
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+        <ul class="list-unstyled components mb-5">
+            <li>
+                <a routerLink="list" routerLinkActive="active"><span class="mr-3"><fa-icon [icon]="faList"></fa-icon></span> Produtos</a>
+            </li>
+            <li>
+                <a routerLink="add" routerLinkActive="active"><span class="mr-3"><fa-icon [icon]="faPlus"></fa-icon></span>Adicionar Produto</a>
+            </li>
+        </ul>
+        </nav>
+    
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    
+    

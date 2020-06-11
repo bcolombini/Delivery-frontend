@@ -53,6 +53,7 @@ export class CatalogComponent implements OnInit {
   }
 
   remove(item){
+    if(item == -1) return
     this.originalData = this.originalData.filter(x=> x.id != item.id)
     this.products = this.originalData
   }

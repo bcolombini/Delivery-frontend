@@ -7,10 +7,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
-// import { CatalogComponent } from './catalog/catalog/catalog.component';
-import { CurrencyFormatPipe } from '../helpers/currency-format.pipe';
-// import { CatalogMenuComponent } from './catalog/catalog-menu/catalog-menu.component';
 import { DeliveriesComponent } from './deliveries/deliveries/deliveries.component';
+import { SharedModule } from '../shared/shared.module';
+import { CurrencyFormatPipe } from '../helpers/currency-format.pipe';
 
 @NgModule({
   imports: [
@@ -19,12 +18,11 @@ import { DeliveriesComponent } from './deliveries/deliveries/deliveries.componen
     FontAwesomeModule,
     NgbModule,
     NgxChartsModule,
+    SharedModule
   ],
   declarations: [
     AdminComponent,
     AdminDashboardComponent, 
-    CurrencyFormatPipe, 
-    DeliveriesComponent,
-    CurrencyFormatPipe]
+    DeliveriesComponent],
 })
 export class AdminModule { }

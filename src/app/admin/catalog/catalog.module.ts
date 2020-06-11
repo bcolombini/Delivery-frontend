@@ -7,7 +7,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductComponent } from './product/product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { CurrencyFormatPipe } from 'src/app/helpers/currency-format.pipe';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -15,14 +15,15 @@ import { CurrencyFormatPipe } from 'src/app/helpers/currency-format.pipe';
   imports: [
     CommonModule,
     CatalogRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ],
   declarations: [
     CatalogComponent,
     CatalogMenuComponent,
     AddProductComponent,
     EditProductComponent,
-    ProductComponent,
+    ProductComponent
   ]
 })
 export class CatalogModule { }

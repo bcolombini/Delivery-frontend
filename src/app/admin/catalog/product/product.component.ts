@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faTrash,faPause,faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faTrash,faPause,faPlay, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product',
@@ -10,6 +10,7 @@ export class ProductComponent implements OnInit {
   faPause = faPause
   faPlay = faPlay
   faTrash = faTrash
+  faEdit = faEdit
   constructor() { }
 
   ngOnInit(): void {

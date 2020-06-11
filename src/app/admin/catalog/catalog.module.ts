@@ -11,8 +11,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
-
-
 @NgModule({
   imports: [
     CommonModule,

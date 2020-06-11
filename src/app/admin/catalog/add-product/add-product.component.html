@@ -1,6 +1,16 @@
 <div class="p-4 p-md-5 pt-5">
     <div class="row">
-        aBC
+        <h3 class="col-sm-12">Adicionar produto</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">R$</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Preço" [(ngModel)]="priceModel" (keyup)="onChangePrice($event)">
+              </div>
+        </div>
     </div>
 </div>
 

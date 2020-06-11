@@ -1,6 +1,6 @@
 
 <div class="modal-header">
-<h4 class="modal-title">Deseja realmente excluir o item {{item.name}}?</h4>
+<h4 class="modal-title">Deseja realmente excluir o item {{item|json}}?</h4>
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-danger" (click)="activeModal.close(item)">Sim</button>

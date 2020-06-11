@@ -3,16 +3,15 @@
         <nav id="sidebar">
         <ul class="list-unstyled components mb-5">
             <li>
-                <a routerLink="." fragment="order"><span class="mr-3"><fa-icon [icon]="faFileAlt"></fa-icon></span>Pedido</a>
+                <a routerLink="order" routerLinkActive="active"><span class="mr-3"><fa-icon [icon]="faFileAlt"></fa-icon></span>Pedido</a>
             </li>
             <li>
-                <a routerLink="." fragment="chat" ><span class="mr-3"><fa-icon [icon]="faWhatsApp"></fa-icon></span>Chat <span class="badge badge-pill badge-danger">2</span></a>
+                <a routerLink="chat" routerLinkActive="active"><span class="mr-3"><fa-icon [icon]="faWhatsApp"></fa-icon></span>Chat <span class="badge badge-pill badge-danger">2</span></a>
             </li>
         </ul>
         </nav>
         <div id="content" class="p-4 p-md-3 pt-5">
-            <app-order *ngIf="!appOrder"></app-order>
-            <app-chat *ngIf="appOrder"></app-chat>
+            <router-outlet></router-outlet>
         </div>
     </div>
 <app-footer></app-footer>

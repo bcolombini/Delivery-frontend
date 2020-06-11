@@ -10,7 +10,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

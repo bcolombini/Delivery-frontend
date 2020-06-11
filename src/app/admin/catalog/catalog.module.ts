@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     CatalogRoutingModule,
     FontAwesomeModule,
     SharedModule,
-    FormsModule 
+    FormsModule,
+    NgbModalModule
   ],
   declarations: [
     CatalogComponent,

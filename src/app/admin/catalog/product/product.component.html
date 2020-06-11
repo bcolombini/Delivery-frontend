@@ -1,20 +1,20 @@
 <table id="mytable" class="table table-bordred table-striped">            
     <thead>
         <th>Produto</th>
-        <th (click)="sort()">Preço <fa-icon *ngIf="sortStep" [icon]="sortIcon"></fa-icon></th>
-        <th class="text-center">Editar</th>
+        <th style="cursor:pointer" (click)="sort()">Preço <fa-icon *ngIf="sortStep" [icon]="sortIcon"></fa-icon></th>
         <th class="text-center">Continuar</th>
         <th class="text-center">Pausar</th>
+        <th class="text-center">Editar</th>
         <th class="text-center">Excluir</th>
     </thead>
     <tbody>
         <tr *ngFor="let product of products">
             <td>{{product.name}}</td>
             <td>{{product.price|currencyFormat}}</td>
-            <td><a  routerLink="." class="col-sm-12 col-sm-12 btn btn-outline-warning " alt="Editar"><fa-icon [icon]="faEdit"></fa-icon></a></td>
             <td><a  routerLink="." class="col-sm-12 col-sm-12 btn btn-outline-primary " alt="Voltar com o produto"><fa-icon [icon]="faPlay"></fa-icon></a></td>
             <td><a  routerLink="." class="col-sm-12 col-sm-12 btn btn-outline-secondary" alt="Pausar Venda"><fa-icon [icon]="faPause"></fa-icon></a></td>
-            <td><a  routerLink="." class="col-sm-12 col-sm-12 btn btn-outline-danger align-middle" alt="Excluir "><fa-icon [icon]="faTrash"></fa-icon></a></td>
+            <td><a  routerLink="." class="col-sm-12 col-sm-12 btn btn-outline-warning " alt="Editar"><fa-icon [icon]="faEdit"></fa-icon></a></td>
+            <td><a  routerLink="." (click)="onDelete(product)" class="col-sm-12 col-sm-12 btn btn-outline-danger align-middle" alt="Excluir "><fa-icon [icon]="faTrash"></fa-icon></a></td>
         </tr>
     </tbody>
 </table>

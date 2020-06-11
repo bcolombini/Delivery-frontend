@@ -4,5 +4,10 @@
     </div>
 </div>
 <div class="row mx-auto">
-    <app-product  class="col-sm-12 mt-3"></app-product>
+    <div class="col-sm-12">
+        <div class="input-group offset-sm-9 col-sm-3">
+            <input type="text" class="form-control" [(ngModel)]="myModel" (ngModelChange)="onChange($event)" placeholder="Filtrar Produto" aria-label="Filtrar Produto" aria-describedby="basic-addon2">
+          </div>
+    </div>
+    <app-product  class="col-sm-12 mt-3" [products]='products'></app-product>
 </div>

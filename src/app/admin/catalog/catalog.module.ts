@@ -8,6 +8,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductComponent } from './product/product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     CatalogRoutingModule,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    FormsModule 
   ],
   declarations: [
     CatalogComponent,

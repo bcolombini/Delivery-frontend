@@ -9,7 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { DeliveriesComponent } from './deliveries/deliveries/deliveries.component';
 import { SharedModule } from '../shared/shared.module';
-import { CurrencyFormatPipe } from '../helpers/currency-format.pipe';
+import { ToastsContainer } from '../service/toast/toasts-container.component';
 
 @NgModule({
   imports: [
@@ -23,6 +23,7 @@ import { CurrencyFormatPipe } from '../helpers/currency-format.pipe';
   declarations: [
     AdminComponent,
     AdminDashboardComponent, 
-    DeliveriesComponent],
+    DeliveriesComponent,
+    ToastsContainer],
 })
 export class AdminModule { }

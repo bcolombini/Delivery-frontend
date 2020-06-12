@@ -1,1 +1,41 @@
-<p>edit-product works!</p>
+<div class="p-4 p-md-5 pt-5">
+    <div class="row">
+        <h3 class="col-sm-12">Editar produto</h3>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-6 mt-3">
+            <h5>Nome do Produto<sup class="text-danger">*</sup></h5>
+            <div class="input-group mt-2">
+                <input type="text" class="form-control" placeholder="Nome do produto" aria-label="Nome" [(ngModel)]="productNameModel">
+            </div>
+        </div>
+        <div class="col-sm-6 mt-3">
+            <h5>Preço<sup class="text-danger">*</sup></h5>
+            <div class="input-group mt-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">R$</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Preço" [(ngModel)]="priceModel" (keyup)="onChangePrice($event)">
+            </div>
+        </div>
+        <div class="col-sm-12 mt-3">
+            <h5>Descrição</h5>
+            <div class="input-group mt-2">
+                <textarea type="text" [(ngModel)]="descriptionModel" placeholder="Descrição do produto" class="form-control" aria-label="Preço"></textarea>
+            </div>
+            <small class="counter">0/1500</small>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-12">
+            <small><i><span class="text-danger">*</span> Preenchimento obrigatórios</i></small>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-12">
+            <a href="#" class="col-sm-12 btn btn-primary ">Salvar</a>
+        </div>
+    </div>
+</div>
+

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faTrash,faPause,faPlay, faEdit,faSortAmountUp, faSortAmountDown } from '@fortawesome/free-solid-svg-icons';
+import { ToastService } from 'src/app/service/toast/toast.service';
 
 @Component({
   selector: 'app-product',
@@ -19,7 +20,7 @@ export class ProductComponent implements OnInit {
   @Input("products") products: Object[];
   @Output("delete") deleteEvent = new EventEmitter();
 
-  constructor() {
+  constructor(private toastService: ToastService) {
     
   }
 
@@ -45,6 +46,14 @@ export class ProductComponent implements OnInit {
 
   onDelete(item){
     this.deleteEvent.emit(item)
+  }
+
+  start(itemName){
+    this.toastService.toastActionStartItem(itemName)
+  }
+
+  pause(itemName){
+    this.toastService.toastActionStopItem(itemName)
   }
 
 }

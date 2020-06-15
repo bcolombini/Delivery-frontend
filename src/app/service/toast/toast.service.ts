@@ -31,7 +31,7 @@ export class ToastService {
       message:"👌 O item "+itemName+" começou a ser vendido",
       options:{
         classname: 'bg-info text-light', 
-        delay: 5000
+        delay: 5000000
       }
     })
   }

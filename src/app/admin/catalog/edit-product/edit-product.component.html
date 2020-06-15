@@ -22,7 +22,7 @@
         <div class="col-sm-12 mt-3">
             <h5>Descrição</h5>
             <div class="input-group mt-2">
-                <textarea type="text" [(ngModel)]="descriptionModel" placeholder="Descrição do produto" class="form-control" aria-label="Preço"></textarea>
+                <textarea type="text" [(ngModel)]="descriptionModel" placeholder="Descrição do produto" (keyup)="onLimitCharset($event)" class="form-control" aria-label="Preço"></textarea>
             </div>
             <small class="counter">0/1500</small>
         </div>

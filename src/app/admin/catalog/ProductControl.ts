@@ -49,4 +49,8 @@ export class ProductControl {
     }
 
 
+    onReadData(imageBase64){
+        console.log(imageBase64)
+      }
+  
 }

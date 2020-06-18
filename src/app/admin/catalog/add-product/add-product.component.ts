@@ -7,7 +7,7 @@ import { ProductControl } from '../ProductControl';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent extends ProductControl implements OnInit {
-  
+    public imagePath = "";
     public priceModel: String = "0,00";
     public productNameModel: String;
     public descriptionModel: String;
@@ -17,6 +17,5 @@ export class AddProductComponent extends ProductControl implements OnInit {
 
     ngOnInit(): void {
     }
-
-    
+   
 }

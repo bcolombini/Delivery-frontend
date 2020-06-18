@@ -4,19 +4,24 @@
     </div>
     <hr/>
     <div class="row">
-        <div class="col-sm-6 mt-3">
-            <h5>Nome do Produto<sup class="text-danger">*</sup></h5>
-            <div class="input-group mt-2">
-                <input type="text" class="form-control" placeholder="Nome do produto" aria-label="Nome" [(ngModel)]="productNameModel">
-            </div>
+        <div class="col-sm-6 mb-4">
+            <app-dragzone title="Imagem do produto" (onReadData)="onReadData($event)"></app-dragzone>
         </div>
-        <div class="col-sm-6 mt-3">
-            <h5>Preço<sup class="text-danger">*</sup></h5>
-            <div class="input-group mt-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">R$</span>
+        <div class="col-sm-6">
+            <div class="col-sm-12 mt-5">
+                <h5>Nome do Produto<sup class="text-danger">*</sup></h5>
+                <div class="input-group mt-2">
+                    <input type="text" class="form-control" placeholder="Nome do produto" aria-label="Nome" [(ngModel)]="productNameModel">
                 </div>
-                <input type="text" class="form-control" aria-label="Preço" [(ngModel)]="priceModel" (keyup)="onChangePrice($event)">
+            </div>
+            <div class="col-sm-12 mt-5">
+                <h5>Preço<sup class="text-danger">*</sup></h5>
+                <div class="input-group mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">R$</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Preço" [(ngModel)]="priceModel" (keyup)="onChangePrice($event)">
+                </div>
             </div>
         </div>
         <div class="col-sm-12 mt-3">

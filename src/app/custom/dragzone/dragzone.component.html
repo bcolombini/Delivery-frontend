@@ -1,0 +1,24 @@
+<div class="dropzone mx-auto" 
+     dropzone
+     (hovered)="toggleHover($event)"
+     (dropped)="onDrop($event)"
+     [class.hovering]="isHovering">
+     <img *ngIf="imagePath" [src]="imagePath" class="rounded-circle">
+     <span *ngIf="!imagePath">
+      <h5>{{title}}</h5>
+      <p class="text-center">Arreste e Solter a imagem aqui <br />ou selecione uma</p>
+      <div class="file">
+        <label class="file-label">
+        <input class="file-input" type="file" (change)="onDrop($event.target.files)">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fa fa-upload"></i>
+            </span>
+            <span class="btn btn-primary btn-sm"><fa-icon class="mr-2" [icon]="faPlus"></fa-icon>
+              Selecionar
+            </span>
+          </span>
+        </label>
+      </div>
+    </span>
+</div>
